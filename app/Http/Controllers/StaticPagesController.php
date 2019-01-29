@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class StaticPagesController extends Controller
 {
     public function home() {
-        return 'Home';
+        return view('static_pages/home');
     }
 
     public function help() {
-        return 'Help';
+        return view('static_pages/help');
     }
 
     public function about() {
-        return 'About';
+        return view('static_pages/about');
     }
 }
