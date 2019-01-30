@@ -21,3 +21,5 @@ Route::get('/testvue', 'StaticPagesController@testvue');
 
 //注册路由时，URI signup 和 /signup 从使用上来看，并无区别，Laravel 框架兼容这两种写法。
 Route::get('/signup', 'UsersController@create')->name('signup');
+
+Route::resource('/users', 'UsersController');
