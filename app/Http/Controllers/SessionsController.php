@@ -18,7 +18,7 @@ class SessionsController extends Controller
        ]);
        //如果validate失败，则old('email')会被自动填充
 
-       if (Auth::attempt($credentials)) {
+       if (Auth::attempt($credentials, $request->has('remember'))) {
            session()->flash('success', '欢迎回来！');
            return redirect()->route('users.show', [Auth::user()]);
        } else {
