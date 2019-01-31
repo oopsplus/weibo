@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>@yield('title', 'Weibo App') - Laravel 新手入门教程</title>
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
@@ -14,5 +16,7 @@
       @yield('content')
       @include('layouts._footer')
   </div>
+
+  <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
